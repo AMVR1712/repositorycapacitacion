@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="default" extends="hibernate-default">
+		<action name="alta" class="org.action.usercap.ActionUserCap" method="add">
+			<result name="success" type="redirect">consulta</result>
+		</action>
+		<action name="baja" class="org.action.usercap.ActionUserCap" method="delete">
+			<result name="success" type="redirect">consulta</result>
+		</action>
+		<action name="consulta" class="org.action.usercap.ActionUserCap" method="list">
+			<result name="success">/formulario.jsp</result>
+		</action>
+		<action name="editar" class="org.action.usercap.ActionUserCap" method="edit">
+			<result name="success">/formulario.jsp</result>
+		</action>
+	</package>
+</struts>
